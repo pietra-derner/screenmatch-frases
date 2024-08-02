@@ -1,9 +1,7 @@
 package com.screenmatch.frases.dto;
 
-import com.screenmatch.frases.model.Serie;
-
 public record FraseDTO (String titulo,
+                        String frase,
                         String personagem,
-                        String poster,
-                        Serie serie) {
+                        String poster) {
 }

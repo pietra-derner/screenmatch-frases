@@ -1,28 +1,22 @@
 package com.screenmatch.frases.controller;
 
 import com.screenmatch.frases.dto.FraseDTO;
-import com.screenmatch.frases.dto.SerieDTO;
-import com.screenmatch.frases.service.SerieService;
+import com.screenmatch.frases.service.FraseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("/series")
-public class SerieController {
-    @Autowired
-    private SerieService servico;
+public class FraseController {
 
-    @GetMapping
-    public List<SerieDTO> obterSeries(){
-        return servico.obterTodasAsSeries();
-    }
+    @Autowired
+    private FraseService servico;
 
     @GetMapping("/frases")
-    public List<FraseDTO> obterFrases(){
+    public FraseDTO obterFraseAleatoria(){
         return servico.obterFraseAleatoria();
     }
+
 }

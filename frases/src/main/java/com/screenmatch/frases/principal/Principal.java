@@ -1,17 +1,17 @@
 package com.screenmatch.frases.principal;
 
-import com.screenmatch.frases.model.Serie;
-import com.screenmatch.frases.repository.SerieRepository;
+import com.screenmatch.frases.model.Frase;
+import com.screenmatch.frases.repository.FraseRepository;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Principal {
 
-    private SerieRepository repositorio;
-    private List<Serie> series = new ArrayList<>();
+    private FraseRepository repositorio;
+    private List<Frase> frases = new ArrayList<>();
 
-    public Principal(SerieRepository repositorio){
+    public Principal(FraseRepository repositorio){
         this.repositorio = repositorio;
     }
 }
